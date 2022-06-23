@@ -26,7 +26,7 @@ export class AuthService {
     const candidate = await this.userService.getUserByEmail(userDto.email);
     if (candidate) {
       throw new HttpException(
-        'User already registered',
+        'User already authorized',
         HttpStatus.BAD_REQUEST,
       );
     }
